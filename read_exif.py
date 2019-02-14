@@ -58,7 +58,7 @@ if __name__ == '__main__':
     # path = join('C:/', 'sony.JPG')
 
     file_name = Exif(path).exif_info()
-    if file_name != None:
-        print('非空 %s' % file_name)
-    else:
-        print('空 %s' % file_name)
+    # if file_name != None:
+    #     print('非空 %s' % file_name)
+    # else:
+    #     print('空 %s' % file_name)
