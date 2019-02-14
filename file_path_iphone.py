@@ -2,7 +2,7 @@ import os
 import time
 from os import listdir
 from os.path import isfile, isdir, join
-from read_exif_time import ExifTime
+from read_exif import Exif
 
 
 class Path:
@@ -22,7 +22,7 @@ class Path:
 
                 file_type = os.path.splitext(f)[-1]
                 # 使用 EXIF 時間為檔案名稱
-                new_name = ExifTime().name_time(dir_path) + file_type
+                new_name = Exif().name_time(dir_path) + file_type
                 old_name_path = path  # 舊路徑,是檔案路徑
                 if new_name == 'No_EXIF' + file_type:
                     # 沒 exif_time
